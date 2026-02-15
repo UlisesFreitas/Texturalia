@@ -1,0 +1,295 @@
+{
+  "3": {
+    "inputs": {
+<<<<<<< HEAD:texturalia/resources/workflows/enhance_workflow_inpaint.json
+      "seed": 555743338619290,
+=======
+      "seed": 483051399583516,
+>>>>>>> 236085cc4e621bd90b145d5700b6ad5cd2919294:texturalia/resources/enhance_workflow_inpaint.json
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+<<<<<<< HEAD:texturalia/resources/workflows/enhance_workflow_inpaint.json
+      "denoise": 1,
+=======
+      "denoise": 0.72,
+>>>>>>> 236085cc4e621bd90b145d5700b6ad5cd2919294:texturalia/resources/enhance_workflow_inpaint.json
+      "model": [
+        "23",
+        0
+      ],
+      "positive": [
+        "28",
+        0
+      ],
+      "negative": [
+        "19",
+        0
+      ],
+      "latent_image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "dreamshaper_8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "6": {
+    "inputs": {
+<<<<<<< HEAD:texturalia/resources/workflows/enhance_workflow_inpaint.json
+      "text": "3D render man, front view, lowpoly, low polygons, face, change belt to red",
+=======
+      "text": "3D render man, front view, lowpoly, low polygons, face, gauntlets, and bel, boots darker",
+>>>>>>> 236085cc4e621bd90b145d5700b6ad5cd2919294:texturalia/resources/enhance_workflow_inpaint.json
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Positive Prompt"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "blurry, low quality, watermark, text, shadows",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "Texturalia_Enhance",
+      "images": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "grow_mask_by": 6,
+      "pixels": [
+<<<<<<< HEAD:texturalia/resources/workflows/enhance_workflow_inpaint.json
+        "35",
+=======
+        "11",
+>>>>>>> 236085cc4e621bd90b145d5700b6ad5cd2919294:texturalia/resources/enhance_workflow_inpaint.json
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ],
+      "mask": [
+<<<<<<< HEAD:texturalia/resources/workflows/enhance_workflow_inpaint.json
+        "37",
+        0
+=======
+        "32",
+        1
+>>>>>>> 236085cc4e621bd90b145d5700b6ad5cd2919294:texturalia/resources/enhance_workflow_inpaint.json
+      ]
+    },
+    "class_type": "VAEEncodeForInpaint",
+    "_meta": {
+      "title": "VAE Encode (Inpaint)"
+    }
+  },
+<<<<<<< HEAD:texturalia/resources/workflows/enhance_workflow_inpaint.json
+=======
+  "11": {
+    "inputs": {
+      "image": "Gemini_Generated_Image_68chsm68chsm68ch.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+>>>>>>> 236085cc4e621bd90b145d5700b6ad5cd2919294:texturalia/resources/enhance_workflow_inpaint.json
+  "19": {
+    "inputs": {
+      "text": "blurry, low quality",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "20": {
+    "inputs": {
+      "control_net_name": "control_v11f1p_sd15_depth.pth"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "23": {
+    "inputs": {
+      "preset": "STANDARD (medium strength)",
+      "model": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "IPAdapterUnifiedLoader",
+    "_meta": {
+      "title": "IPAdapter Unified Loader"
+    }
+  },
+  "28": {
+    "inputs": {
+      "strength": 1,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "control_net": [
+        "20",
+        0
+      ],
+      "image": [
+<<<<<<< HEAD:texturalia/resources/workflows/enhance_workflow_inpaint.json
+        "34",
+=======
+        "29",
+>>>>>>> 236085cc4e621bd90b145d5700b6ad5cd2919294:texturalia/resources/enhance_workflow_inpaint.json
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+<<<<<<< HEAD:texturalia/resources/workflows/enhance_workflow_inpaint.json
+=======
+  "29": {
+    "inputs": {
+      "image": "Gemini_Generated_Image_68chsm68chsm68ch.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "ControlNet Image"
+    }
+  },
+>>>>>>> 236085cc4e621bd90b145d5700b6ad5cd2919294:texturalia/resources/enhance_workflow_inpaint.json
+  "31": {
+    "inputs": {
+      "rem_mode": "RMBG-1.4",
+      "image_output": "Hide",
+      "save_prefix": "ComfyUI",
+      "torchscript_jit": false,
+      "add_background": "none",
+      "refine_foreground": false,
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "easy imageRemBg",
+    "_meta": {
+      "title": "Image Remove Bg"
+    }
+  },
+<<<<<<< HEAD:texturalia/resources/workflows/enhance_workflow_inpaint.json
+  "34": {
+    "inputs": {
+      "image": "Front.png"
+=======
+  "32": {
+    "inputs": {
+      "image": "clipspace/clipspace-painted-masked-1771080506800.png [input]"
+>>>>>>> 236085cc4e621bd90b145d5700b6ad5cd2919294:texturalia/resources/enhance_workflow_inpaint.json
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+<<<<<<< HEAD:texturalia/resources/workflows/enhance_workflow_inpaint.json
+  },
+  "35": {
+    "inputs": {
+      "image": "Front.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "36": {
+    "inputs": {
+      "image": "DEBUG_Mask_Front.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "37": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "36",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+=======
+>>>>>>> 236085cc4e621bd90b145d5700b6ad5cd2919294:texturalia/resources/enhance_workflow_inpaint.json
+  }
+}

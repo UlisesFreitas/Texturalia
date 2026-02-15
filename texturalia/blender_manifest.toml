@@ -1,0 +1,12 @@
+schema_version = "1.0.0"
+id = "texturalia"
+version = "2.4.4"
+name = "Texturalia"
+tagline = "Multi-View Capture & UV Projection for 3D Models"
+maintainer = "Ulises"
+type = "add-on"
+blender_version_min = "4.2.0"
+license = ["MIT"]
+
+platforms = ["windows-x64"]
+
